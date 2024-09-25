@@ -1,0 +1,9 @@
+{
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript"
+    ],
+    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+  }
+  

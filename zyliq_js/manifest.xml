@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+	<Id>35d2b86f-93b0-4055-a5be-22eb7d845239</Id>
+	<Version>1.0.0.0</Version>
+	<ProviderName>Contoso</ProviderName>
+	<DefaultLocale>en-US</DefaultLocale>
+	<DisplayName DefaultValue="zyliq_js"/>
+	<Description DefaultValue="A template to get started."/>
+	<IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
+	<HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
+	<SupportUrl DefaultValue="https://www.contoso.com/help"/>
+	<AppDomains>
+		<AppDomain>https://www.contoso.com</AppDomain>
+	</AppDomains>
+	<Hosts>
+		<Host Name="Document"/>
+	</Hosts>
+	<DefaultSettings>
+		<SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+	</DefaultSettings>
+	<Permissions>ReadWriteDocument</Permissions>
+	<VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+		<Hosts>
+			<Host xsi:type="Document">
+				<DesktopFormFactor>
+					<GetStarted>
+						<Title resid="GetStarted.Title"/>
+						<Description resid="GetStarted.Description"/>
+						<LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
+					</GetStarted>
+					<FunctionFile resid="Commands.Url"/>
+					<ExtensionPoint xsi:type="PrimaryCommandSurface">
+						<CustomTab id="MyTab">
+							<Group id="UploadGroup">
+								<Label resid="UploadGroup.Label"/>
+								<Icon>
+									<bt:Image size="16" resid="Icon.16x16"/>
+									<bt:Image size="32" resid="Icon.32x32"/>
+									<bt:Image size="80" resid="Icon.80x80"/>
+								</Icon>
+								<Control xsi:type="Button" id="UploadButton">
+									<Label resid="UploadButton.Label"/>
+									<Supertip>
+										<Title resid="UploadButton.Label"/>
+										<Description resid="UploadButton.Tooltip"/>
+									</Supertip>
+									<Icon>
+										<bt:Image size="16" resid="Icon.16x16"/>
+										<bt:Image size="32" resid="Icon.32x32"/>
+										<bt:Image size="80" resid="Icon.80x80"/>
+									</Icon>
+									<Action xsi:type="ShowTaskpane">
+										<TaskpaneId>ButtonId1</TaskpaneId>
+										<SourceLocation resid="Taskpane.Url"/>
+									</Action>
+								</Control>
+							</Group>
+							<Group id="TenseGroup">
+								<Label resid="TenseGroup.Label"/>
+								<Icon>
+									<bt:Image size="16" resid="Icon.16x16"/>
+									<bt:Image size="32" resid="Icon.32x32"/>
+									<bt:Image size="80" resid="Icon.80x80"/>
+								</Icon>
+								<Control xsi:type="Button" id="TenseButton">
+									<Label resid="TenseButton.Label"/>
+									<Supertip>
+										<Title resid="TenseButton.Label"/>
+										<Description resid="TenseButton.Tooltip"/>
+									</Supertip>
+									<Icon>
+										<bt:Image size="16" resid="Icon.16x16"/>
+										<bt:Image size="32" resid="Icon.32x32"/>
+										<bt:Image size="80" resid="Icon.80x80"/>
+									</Icon>
+									<Action xsi:type="ShowTaskpane">
+										<TaskpaneId>ButtonId2</TaskpaneId>
+										<SourceLocation resid="Taskpane2.Url"/>
+									</Action>
+								</Control>
+							</Group>
+							<Label resid="MyTab.Label"/>
+						</CustomTab>
+					</ExtensionPoint>
+				</DesktopFormFactor>
+			</Host>
+		</Hosts>
+		<Resources>
+			<bt:Images>
+				<bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
+				<bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
+				<bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
+			</bt:Images>
+			<bt:Urls>
+				<bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
+				<bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+				<bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
+			    <bt:Url id="Taskpane2.Url" DefaultValue="https://localhost:3000/tense.html"/>
+        		<bt:Url id="tense.Url" DefaultValue="https://localhost:3000/tense.js"/> 
+      
+			</bt:Urls>
+			<bt:ShortStrings>
+				<bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
+				<bt:String id="MyTab.Label" DefaultValue="ZYLIQ"/>
+				<bt:String id="UploadGroup.Label" DefaultValue="UPLOAD FILE"/>
+				<bt:String id="TenseGroup.Label" DefaultValue="TENSE"/>
+				<bt:String id="UploadButton.Label" DefaultValue="UPLOAD FILE"/>
+				<bt:String id="TenseButton.Label" DefaultValue="TENSE"/>
+			</bt:ShortStrings>
+			<bt:LongStrings>
+				<bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded successfully. Go to the HOME tab and click the 'Show Taskpane' button to get started."/>
+				<bt:String id="UploadButton.Tooltip" DefaultValue="Click to upload a file"/>
+				<bt:String id="TenseButton.Tooltip" DefaultValue="Click to change tense"/>
+			</bt:LongStrings>
+		</Resources>
+	</VersionOverrides>
+</OfficeApp>

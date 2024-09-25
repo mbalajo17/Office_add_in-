@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contoso Task Pane Add-in</title>
+
+  <!-- Office JavaScript API -->
+  <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+  <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+  <link rel="stylesheet"
+    href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
+
+  <!-- Template styles -->
+  <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+  <header >
+  </header>
+  <section id="sideload-msg" >
+    <h2 class="ms-font-xl">
+    </h2>
+  </section>
+  <main id="app-body" class="ms-welcome__main">
+  
+    <h3>GET PLS DOC</h3>
+    <button id="load-from-api">Load Document from API</button>
+    <br>
+    <br>
+    <button id="remove-doc">remove doc</button>
+
+    </br>
+    <button id="get-font-style">Get Font Style</button>
+    <p id="font-style-output"></p>
+    <br>
+    <button id="get-xml">Get XML</button>
+    <p id="xml-output"></p>
+    <br>
+    <!-- <br> -->
+    <!-- <button id="get-textfor">TENSE CHANGE</button> -->
+    <p id="formatted-output"></p>
+    <br>
+    <button id="restrict-section">Restrict Section</button>
+    <br>
+    
+    <br>
+    <!-- <button id="saveButton">Save Document</button> -->
+    <button id="save-button">Save Documentddd</button>
+    <br>
+
+    <div class="upload-container">
+      <form id="fileUploadForm">
+        <input type="file" id="protocolinput" accept=".pdf, .docx" />
+        <button type="submit" id="submit" class="ms-Button">Upload File</button>
+        <label for="protocolinput" id="protocolFileName"></label>
+
+      </form>
+      <p id="uploadStatusprotocol"></p>
+    </div>
+    <br>
+    <div class="sap-upload">
+      <form id="sapUploadForm">
+        <input type="file" id="sapInput" accept=".pdf, .docx">
+        <button id="sapsubmit">SAPUpload</button>
+        <label for="sapInput" id="sapFileName"></label>
+
+
+      </form>
+      <p id="uploadStatusSAP"></p>
+    </div>
+    <br>
+    <div class="intext-upload">
+      <form id="intextUploadForm">
+        <input type="file" id="intextInput" multiple>
+        <button id="intext">INTEXTUpload</button>
+        <label for="intextInput" id="intextFileName"></label>
+      </form>
+      <p id="uploadStatusINTEXT"></p>
+    </div>
+
+    <div class="button-container">
+      <button id="apiButton">Process Study</button>
+    </div>
+
+    <br>
+    <br>
+    <button id="removeRestrictions">Remove Restrictions</button>
+    <br>
+    <br>
+
+  </main>
+  <script>
+
+  </script>
+</body>
+
+</html>
